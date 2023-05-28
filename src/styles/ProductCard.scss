@@ -11,18 +11,22 @@
     align-items: center;
     transition: all 0.5s;
 
-    > img{
+    > p{
+        color: $primarydark;
+    }
+
+    > img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    > h4{
+    > h4 {
         margin: 1rem;
         color: $primarydark;
     }
 
-    > button{
+    > button {
         cursor: pointer;
         background-color: $secondary;
         border: none;
@@ -30,6 +34,14 @@
         border-radius: 5px;
         color: $tertiary;
         transition: all 0.5s;
-        font: 800 1rem "Roboto";
+        font: 500 1rem "Roboto";
+
+        &:hover {
+            background-color: $secondarydark;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.05);
     }
 }
