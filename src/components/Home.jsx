@@ -14,9 +14,22 @@ import { useDispatch } from "react-redux";
 const Home = () => {
     const [productList, setProductList] = useState([]);
     const fetchCoins = async () => {
+        // CoinGecko API 
+        // try {
+        //     const { data } = await axios.get(
+        //         "https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr"
+        //     );
+        //     // console.log(data);
+
+        //     setProductList(data);
+        // } catch (error) {
+        //     console.log(error);
+        // }
+
+        // personal API
         try {
             const { data } = await axios.get(
-                "https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr"
+                "https://ujjwaljamuar.github.io/JSONsAPIs/ProductItems.json"
             );
             // console.log(data);
 
