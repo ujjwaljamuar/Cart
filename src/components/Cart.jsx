@@ -4,6 +4,7 @@ import "../styles/Cart.scss";
 import "../styles/MediaQuery.scss";
 import CartItem from "./CartItem";
 import { useDispatch, useSelector } from "react-redux";
+import OrderButton from "./OrderButton";
 
 const Cart = () => {
     const dispatch = useDispatch();
@@ -70,6 +71,10 @@ const Cart = () => {
                 <h2>Shipping: ${shipping}</h2>
                 <h2>Tax: ${tax}</h2>
                 <h2>Total: ${total}</h2>
+
+                <div>
+                    <OrderButton />
+                </div>
             </aside>
         </div>
     );
