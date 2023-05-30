@@ -9,21 +9,22 @@ const CartItem = ({
     qty,
     increment,
     decrement,
-    deleteHanlder,
+    deleteHandler,
 }) => (
     <div className="cartItem">
-        <img src={imgSrc} alt={name} />
+        <img src={imgSrc} alt="Item" />
         <article>
             <h3>{name}</h3>
-            <p>{price}</p>
+            <p>${price}</p>
         </article>
 
         <div>
             <button onClick={() => decrement(id)}>-</button>
+            <p>{qty}</p>
             <button onClick={() => increment(id)}>+</button>
         </div>
 
-        <AiFillDelete onClick={() => deleteHanlder(id)} />
+        <AiFillDelete onClick={() => deleteHandler(id)} />
     </div>
 );
 
