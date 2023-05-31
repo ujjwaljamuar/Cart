@@ -73,7 +73,7 @@ const Cart = () => {
                 <h2>Total: ${total}</h2>
 
                 <div>
-                    <OrderButton />
+                    {cartItems.length > 0 ? <OrderButton /> : <div></div>}
                 </div>
             </aside>
         </div>
