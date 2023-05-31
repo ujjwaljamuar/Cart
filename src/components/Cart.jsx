@@ -44,6 +44,8 @@ const Cart = () => {
         });
     };
 
+    
+
     return (
         <div className="cart">
             <main>
@@ -73,7 +75,11 @@ const Cart = () => {
                 <h2>Total: ${total}</h2>
 
                 <div>
-                    {cartItems.length > 0 ? <OrderButton /> : <div></div>}
+                    {cartItems.length > 0 ? (
+                        <OrderButton />
+                    ) : (
+                        <div></div>
+                    )}
                 </div>
             </aside>
         </div>

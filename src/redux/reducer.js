@@ -6,7 +6,7 @@ export const cartReducer = createReducer(
         subTotal: 0,
         shipping: 0,
         tax: 0,
-        total: 0,
+        total: 0
     },
     {
         addToCart: (state, action) => {
@@ -45,5 +45,13 @@ export const cartReducer = createReducer(
             state.tax = +(state.subTotal * 0.18).toFixed();
             state.total = +(state.subTotal + state.shipping + state.tax).toFixed(2);
         },
+
+        orderComplete: (state) => {
+            state.cartItems = [];
+            state.subTotal = 0;
+            state.shipping = 0;
+            state.tax = 0;
+            state.total = 0;            
+        }
     }
 );

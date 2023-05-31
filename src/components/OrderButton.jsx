@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 
 import "../styles/OrderButton.css";
+import { useDispatch } from "react-redux";
 
 const OrderButton = () => {
     const [animate, setAnimate] = useState(false);
+
+    const dispatch = useDispatch();
 
     const handleClick = () => {
         if (!animate) {
             setAnimate(true);
             setTimeout(() => {
                 setAnimate(false);
+                dispatch({ type: "orderComplete" });
+                dispatch({ type: "calculatePrice" });
             }, 10000);
         }
     };
